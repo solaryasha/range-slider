@@ -5,7 +5,6 @@ body {
 
 form {
   margin: auto;
-  
 }
 
 label {
@@ -21,9 +20,6 @@ label {
 .input-range {
   grid-column: 1;
   grid-row: 2;
-
-  
-
   pointer-events: none; 
 }
 

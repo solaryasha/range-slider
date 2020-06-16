@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer ></script>
   <title>Document</title>
 </head>
 <body>
   <form>
     <label for="min">
       Min:
-      <input type="text" name="min-value" id="min">
+      <input type="text" name="min-value" id="min" class="min-value">
     </label>
   
     <label for="max">
-      Min:
-      <input type="text" name="max-value" id="max">
+      Max:
+      <input type="text" name="max-value" id="max" class="max-value">
     </label>
     <div class="wrapper">
-      <input type="range" name="" id="" class="input-range left">
-      <input type="range" name="" id="" class="input-range right">
+      <input type="range" name="" id=""  value="10" class="input-range left">
+      <input type="range" name="" id=""  value='100' class="input-range right">
     </div>
   </form>
 </body>
