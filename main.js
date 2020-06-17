@@ -23,7 +23,7 @@ wrapper.addEventListener('click', e => {
 
 minRange.addEventListener('mousemove', onMouseMoveMin);
 minRange.addEventListener('mouseup', e => {
-  maxRange.removeEventListener('mousemove', onMouseMoveMax);
+  minRange.removeEventListener('mousemove', onMouseMoveMin);
 });
 
 maxRange.addEventListener('mousemove', onMouseMoveMax);
@@ -50,14 +50,24 @@ maxValue.addEventListener('input', e => {
 
 const getProperRange = input => Math.floor((input / endPoint) * 100);
 const getProperInputNumber = input => Math.floor(input * endPoint / 100);
+
 function onMouseMoveMin (e) {
+  if (minRange.value >= maxRange.value) {
+    console(maxRange.dis)
+    return;
+  }
   minValue.value = (event.clientX - startPoint >= 0) 
   ? event.clientX - startPoint
   : 0;
 
+  
+
   if (minValue.value > endPoint) {
     minValue.value = endPoint;
   }
+
+  
+
 }
 
 function onMouseMoveMax (e) {
